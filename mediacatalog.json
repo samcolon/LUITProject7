@@ -1,0 +1,207 @@
+{
+    "MediaCatalog": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "Barbie"
+                    },
+                    "Genre": {
+                        "S": "Comedy"
+                    },
+                    "Rating": {
+                        "S": "PG-13"
+                    },
+                    "Release Date": {
+                        "S": "2023-07-21"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "Guardians of the Galaxy Vol 3"
+                    },
+                    "Genre": {
+                        "S": "Action"
+                    },
+                    "Rating": {
+                        "S": "PG-13"
+                    },
+                    "Release Date": {
+                        "S": "2023-05-05"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "Indiana Jones The Dials of Destiny"
+                    },
+                    "Genre": {
+                        "S": "Adventure"
+                    },
+                    "Rating": {
+                        "S": "PG-13"
+                    },
+                    "Release Date": {
+                        "S": "2023-06-30"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "Mission Impossible 7"
+                    },
+                    "Genre": {
+                        "S": "Action"
+                    },
+                    "Rating": {
+                        "S": "PG-13"
+                    },
+                    "Release Date": {
+                        "S": "2023-07-10"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "Oppenheimer"
+                    },
+                    "Genre": {
+                        "S": "Drama"
+                    },
+                    "Rating": {
+                        "S": "R"
+                    },
+                    "Release Date": {
+                        "S": "2023-07-21"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "Spider-Man: Across the Spider-Verse"
+                    },
+                    "Genre": {
+                        "S": "Action"
+                    },
+                    "Rating": {
+                        "S": "PG"
+                    },
+                    "Release Date": {
+                        "S": "2023-06-02"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "The Flash"
+                    },
+                    "Genre": {
+                        "S": "Action"
+                    },
+                    "Rating": {
+                        "S": "PG-13"
+                    },
+                    "Release Date": {
+                        "S": "2023-06-16"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "The Out-Laws"
+                    },
+                    "Genre": {
+                        "S": "Comedy"
+                    },
+                    "Rating": {
+                        "S": "R"
+                    },
+                    "Release Date": {
+                        "S": "2023-07-21"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "Transformers: Rise of the Beasts"
+                    },
+                    "Genre": {
+                        "S": "Action"
+                    },
+                    "Rating": {
+                        "S": "PG-13"
+                    },
+                    "Release Date": {
+                        "S": "2023-06-09"
+                    }
+                    
+                  
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "MovieTitle": {
+                        "S": "Asteroid City"
+                    },
+                    "Genre": {
+                        "S": "Sci-fi"
+                    },
+                    "Rating": {
+                        "S": "PG-13"
+                    },
+                    "Release Date": {
+                        "S": "2023-05-23"
+                    }
+                    
+                  
+                }
+            }
+        }
+
+
+       
+    ]
+}
