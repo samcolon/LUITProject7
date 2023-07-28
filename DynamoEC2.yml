@@ -1,0 +1,73 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation Template To Create a DynamoDB and an EC2 instance
+
+Parameters:
+  HashKeyElementName:
+    Type: String
+    Default: Movie Title
+    Description: Hash Key Name
+  HashKeyElementType:
+    Type: String
+    Default: S
+    Description: Hash Key Type
+
+  KeyName:
+    Description: The name of the key pair to use for SSH access.
+    Type: AWS::EC2::KeyPair::KeyName
+    Default: AmazonLinux
+  IAMRole:
+    Description: The name of the IAM role to attach to the instance.
+    Type: String
+
+Resources:
+  MovieTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: MediaCatalog
+      AttributeDefinitions:
+        - 
+          AttributeName: !Ref HashKeyElementName
+          AttributeType: !Ref HashKeyElementType
+      KeySchema:
+        - 
+          AttributeName: !Ref HashKeyElementName
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+
+      SSESpecification:
+        SSEEnabled: False
+      ImportSourceSpecification:
+        InputCompressionType: "NONE"
+        InputFormat: "CSV"
+        S3BucketSource:
+          S3Bucket: "mediacatalogdynamodb"
+          S3KeyPrefix: "mediacatalog.csv"
+
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0f34c5ae932e6f0e4
+      InstanceType: t2.micro
+      KeyName: !Ref KeyName
+      SecurityGroups:
+        - !Ref SSHSecurityGroup
+      IamInstanceProfile: !Ref IAMInstanceProfile
+  SSHSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+  IAMInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref IAMRole
+Outputs:
+  TableArn:
+    Description: The ARN of the DynamoDB table
+    Value: !GetAtt MovieTable.Arn
+
